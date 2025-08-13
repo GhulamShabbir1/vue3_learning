@@ -1,11 +1,13 @@
 <template>
   <div>
     <h1>{{ message }}</h1>
-    <p>This is a simple Vue 3 component.</p>
+    <p v-html="tag" ></p>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+
 const message = ref('Hello, Vue 3!');
+const tag=ref('<h1>Interpolation Example</h1>');
 </script>
