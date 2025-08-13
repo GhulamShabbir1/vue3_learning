@@ -1,8 +1,9 @@
 <template>
   <div>
-    <h1>{{ message }}</h1>
+    <h1>{{ message}}</h1>
     <p v-html="tag" ></p>
-    <p v-bind:class="box"> this is Attribute binding</p>
+    <p v-bind:class="objectOfAttrs"> this is Attribute binding</p>
+    <button :disabled="true"> Disable me</button>
   </div>
 </template>
 
@@ -11,7 +12,12 @@ import { ref } from 'vue';
 
 const message = ref('Hello, Vue 3!');
 const tag=ref('<h1>Interpolation Example</h1>');
-const box="container";
+// const box="container";
+const objectOfAttrs = {
+  id: 'container',
+  class: 'wrapper',
+  style: 'background-color:green'
+}
 </script>
 
 <style scoped>
